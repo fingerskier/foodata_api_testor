@@ -1,0 +1,25 @@
+.nutrient.details {
+  display: inline-block;
+  border: thin solid blue;
+  padding: 1rem;
+  min-width: 35%;
+}
+
+
+.food.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.food.title {
+  display: inline-block;
+  max-width: 33%;
+}
+
+
+.nutrient.name {
+  max-width: 50%;
+}
