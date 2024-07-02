@@ -14,18 +14,18 @@ export default function Food({data}) {
   const eatFood = (event)=>{
     event.preventDefault()
     
-    const data = {}
+    const values = {}
     const formData = new FormData(event.target)
     
     formData.forEach((val,key)=>{
-      data[key] = val
+      values[key] = val
     })
-
-    console.log('formdata', data)
     
-    const grams = weightToGrams(data.quantity, data.unit)
+    console.log('formdata', values)
     
-    eat(data.id, grams)
+    const grams = weightToGrams(values.quantity, values.unit)
+    
+    eat(data, grams)
     
     setEating(false)
     

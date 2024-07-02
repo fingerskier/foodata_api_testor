@@ -11,20 +11,28 @@ export function useFoodContext() {
 
 
 export default function FoodContextProvider({children}) {
-  const [eaten, setEaten] = useLocalStorage('eatings', [])
+  const [eaten, setEaten] = useLocalStorage('foods', [])
+  const [feedings, setFeedings] = useLocalStorage('feedings', [])
   
   
-  function eat(id, grams) {
-    setEaten([...eaten, {
-      id: id,
+  function eat(food, grams) {
+    setFeedings([
+      ...feedings, 
+    {
+      id: food.id,
       grams: grams,
     }])
+    
+    setEaten([
+      ...eaten,
+      food,
+    ])
   }
   
   
   const state = {
     eat,
-    eaten,
+    eaten: feedings,
   }
   
   
