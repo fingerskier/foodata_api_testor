@@ -31,24 +31,26 @@ export default function Search() {
 
 
   return <div>
-    Search
-
     <label>
-      Query String
-
+      Search Query
+      
       <input
         onChange={E=>setQuery(E.target.value)}
         type="text"
         value={query}
       />
     </label>
-
+    
     <button onClick={doSearch}>Search</button>
-
-    <pre>
-      {JSON.stringify(meta, null, 2)}
-    </pre>
-
-    {foods? foods.map(FoodItem): null}}
+    
+    <details>
+      <summary>MetaData</summary>
+      
+      <pre>
+        {JSON.stringify(meta, null, 2)}
+      </pre>
+    </details>
+    
+    {foods? foods.map(FoodItem): null}
   </div>
 }

@@ -11,6 +11,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  border: thin solid red;
+  margin: 1rem;
+  padding: 1rem;
 }
 
 
